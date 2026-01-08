@@ -1,0 +1,269 @@
+# Page snapshot
+
+```yaml
+- generic [ref=e1]:
+  - generic [ref=e3]:
+    - banner [ref=e4]:
+      - generic [ref=e7]:
+        - generic [ref=e8]:
+          - text: Hello
+          - strong [ref=e9]: Awesome QAs
+        - generic [ref=e10]:
+          - link "Resources" [ref=e11] [cursor=pointer]:
+            - /url: https://www.stage.riversidedatamanager.com/digitalrsc
+          - text: "|"
+          - link "Help" [ref=e12] [cursor=pointer]:
+            - /url: "https://info.riversideinsights.com/datamanager-onlinehelp "
+          - text: "|"
+          - link "Sign out" [ref=e13] [cursor=pointer]:
+            - /url: https://www.stage.riversidedatamanager.com/user/signout
+    - navigation [ref=e14]:
+      - application [ref=e15]:
+        - listitem [ref=e16]:
+          - link "Overview" [ref=e17] [cursor=pointer]:
+            - /url: https://www.stage.riversidedatamanager.com/overview
+        - listitem [ref=e18]:
+          - toolbar "Assessments Expandable" [ref=e19] [cursor=pointer]: Assessments
+        - listitem [ref=e21]:
+          - toolbar "Proctoring/Scanning Expandable" [ref=e22] [cursor=pointer]: Proctoring/Scanning
+        - listitem [ref=e24]:
+          - toolbar "Reports Expandable" [ref=e25] [cursor=pointer]: Reports
+        - listitem [ref=e27]:
+          - toolbar "Administration Expandable" [ref=e28] [cursor=pointer]: Administration
+  - generic [ref=e30]:
+    - generic [ref=e31]:
+      - navigation [ref=e32]:
+        - list [ref=e33]:
+          - listitem [ref=e34]:
+            - link "Manage Reporting Access" [ref=e35] [cursor=pointer]:
+              - /url: ../../WebReporting/ReportingAdministration.aspx?userID=13485822
+          - listitem [ref=e36]:
+            - link "Download DFAs" [ref=e37] [cursor=pointer]:
+              - /url: ../DownloadDFA.aspx
+          - listitem [ref=e38]:
+            - link "Manage OMR Scanning Options" [ref=e39] [cursor=pointer]:
+              - /url: ../OMR/ManageOMROptions.aspx
+          - listitem [ref=e40]:
+            - link "Manage Locations" [ref=e41] [cursor=pointer]:
+              - /url: ../Locations/ManageLocation.aspx?AdminHome=true
+          - listitem [ref=e42]:
+            - link "Manage Staff Users" [ref=e43] [cursor=pointer]:
+              - /url: ../Staff/ManageStaff.aspx?AdminHome=true
+          - listitem [ref=e44]:
+            - link "Manage Rosters" [ref=e45] [cursor=pointer]:
+              - /url: javascript:__doPostBack('ctl00$hlMngRosters','')
+          - listitem [ref=e46]:
+            - link "Manage Students" [ref=e47] [cursor=pointer]:
+              - /url: ManageStudents.aspx
+          - listitem [ref=e48]:
+            - link "Testing Activity/Notifications" [ref=e49] [cursor=pointer]:
+              - /url: ../Contracts/ManageOnlinePPS.aspx?contractID=1222258&pageName=AdminHome
+          - listitem [ref=e50]:
+            - link "View Licenses" [ref=e51] [cursor=pointer]:
+              - /url: ../SmartInventory/ViewLicenseInfo.aspx
+          - listitem [ref=e52]:
+            - link "Settings and Preferences" [ref=e53] [cursor=pointer]:
+              - /url: ../SettingsPreferences/SettingsPreferences.aspx
+      - link "Close sidebar" [ref=e54] [cursor=pointer]:
+        - /url: javascript:void 1;
+    - contentinfo [ref=e55]
+    - generic [ref=e58]:
+      - heading [level=1]
+      - generic [ref=e59]:
+        - heading "ADD STUDENT" [level=1] [ref=e60]
+        - table [ref=e66]:
+          - rowgroup [ref=e67]:
+            - row "Roster * Riverdale -- 12/23/2025" [ref=e68]:
+              - cell "Roster *" [ref=e69]:
+                - text: Roster
+                - generic [ref=e70]: "*"
+              - cell "Riverdale -- 12/23/2025" [ref=e71]:
+                - combobox [ref=e72]:
+                  - option "Select Roster"
+                  - option "Apex High School -- 01/07/2026"
+                  - option "Atlanta High School -- 11/07/2025"
+                  - option "Jany High School -- 05/15/2025"
+                  - option "Riverdale -- 12/23/2025" [selected]
+                  - option "Solvane -- 09/23/2025"
+            - row "Location / Class *   DMQA-S   1_a   A1B1C1   AB-10   AB-18   Abase District   ABC_123/DISTRICT (123)   ACD-10   AD-12   ADB-100   ADD Std district   ADD-05   ADD-111" [ref=e73]:
+              - cell "Location / Class *" [ref=e74]:
+                - text: Location / Class
+                - generic [ref=e75]: "*"
+              - cell "  DMQA-S   1_a   A1B1C1   AB-10   AB-18   Abase District   ABC_123/DISTRICT (123)   ACD-10   AD-12   ADB-100   ADD Std district   ADD-05   ADD-111" [ref=e76]:
+                - table [ref=e77]:
+                  - rowgroup [ref=e78]:
+                    - row "  DMQA-S   1_a   A1B1C1   AB-10   AB-18   Abase District   ABC_123/DISTRICT (123)   ACD-10   AD-12   ADB-100   ADD Std district   ADD-05   ADD-111" [ref=e79]:
+                      - cell "  DMQA-S   1_a   A1B1C1   AB-10   AB-18   Abase District   ABC_123/DISTRICT (123)   ACD-10   AD-12   ADB-100   ADD Std district   ADD-05   ADD-111" [ref=e80]:
+                        - generic [ref=e83]:
+                          - generic [ref=e85]:
+                            - text: 
+                            - generic [ref=e86]: 
+                            - generic [ref=e87]: 
+                            - generic [ref=e88]: DMQA-S
+                          - generic [ref=e90]:
+                            - text: 
+                            - generic [ref=e92]: 
+                            - generic [ref=e93]: 
+                            - generic [ref=e94]: 1_a
+                          - generic [ref=e96]:
+                            - text: 
+                            - generic [ref=e98]: 
+                            - generic [ref=e99]: 
+                            - generic [ref=e100]: A1B1C1
+                          - generic [ref=e102]:
+                            - text: 
+                            - generic [ref=e104]: 
+                            - generic [ref=e105]: 
+                            - generic [ref=e106]: AB-10
+                          - generic [ref=e108]:
+                            - text: 
+                            - generic [ref=e110]: 
+                            - generic [ref=e111]: 
+                            - generic [ref=e112]: AB-18
+                          - generic [ref=e114]:
+                            - text: 
+                            - generic [ref=e116]: 
+                            - generic [ref=e117]: 
+                            - generic [ref=e118]: Abase District
+                          - generic [ref=e120]:
+                            - text: 
+                            - generic [ref=e122]: 
+                            - generic [ref=e123]: 
+                            - generic [ref=e124]: ABC_123/DISTRICT (123)
+                          - generic [ref=e126]:
+                            - text: 
+                            - generic [ref=e128]: 
+                            - generic [ref=e129]: 
+                            - generic [ref=e130]: ACD-10
+                          - generic [ref=e132]:
+                            - text: 
+                            - generic [ref=e134]: 
+                            - generic [ref=e135]: 
+                            - generic [ref=e136]: AD-12
+                          - generic [ref=e138]:
+                            - text: 
+                            - generic [ref=e140]: 
+                            - generic [ref=e141]: 
+                            - generic [ref=e142]: ADB-100
+                          - generic [ref=e144]:
+                            - text: 
+                            - generic [ref=e146]: 
+                            - generic [ref=e147]: 
+                            - generic [ref=e148]: ADD Std district
+                          - generic [ref=e150]:
+                            - text: 
+                            - generic [ref=e152]: 
+                            - generic [ref=e153]: 
+                            - generic [ref=e154]: ADD-05
+                          - generic [ref=e156]:
+                            - text: 
+                            - generic [ref=e158]: 
+                            - generic [ref=e159]: 
+                            - generic [ref=e160]: ADD-111
+            - row "Grade" [ref=e161]:
+              - cell "Grade" [ref=e162]
+              - cell [ref=e163]
+            - row "First Name * (None)" [ref=e164]:
+              - cell "First Name *" [ref=e165]:
+                - text: First Name
+                - generic [ref=e166]: "*"
+              - cell "(None)" [ref=e167]:
+                - generic [ref=e168]:
+                  - link "(None)" [ref=e170] [cursor=pointer]:
+                    - /url: javascript:void 1;
+                  - button [ref=e172] [cursor=pointer]
+            - row "Last Name * (None)" [ref=e173]:
+              - cell "Last Name *" [ref=e174]:
+                - text: Last Name
+                - generic [ref=e175]: "*"
+              - cell "(None)" [ref=e176]:
+                - generic [ref=e177]:
+                  - link "(None)" [ref=e179] [cursor=pointer]:
+                    - /url: javascript:void 1;
+                  - button [ref=e181] [cursor=pointer]
+            - row "Middle Name (None)" [ref=e182]:
+              - cell "Middle Name" [ref=e183]
+              - cell "(None)" [ref=e184]:
+                - generic [ref=e185]:
+                  - link "(None)" [ref=e187] [cursor=pointer]:
+                    - /url: javascript:void 1;
+                  - button [ref=e189] [cursor=pointer]
+            - row "Unique Student Id * (None)" [ref=e190]:
+              - cell "Unique Student Id *" [ref=e191]:
+                - text: Unique Student Id
+                - generic [ref=e192]: "*"
+              - cell "(None)" [ref=e193]:
+                - generic [ref=e194]:
+                  - link "(None)" [ref=e196] [cursor=pointer]:
+                    - /url: javascript:void 1;
+                  - button [ref=e198] [cursor=pointer]
+            - row "DOB (MM/DD/YYYY) * (None)" [ref=e199]:
+              - cell "DOB (MM/DD/YYYY) *" [ref=e200]:
+                - text: DOB (MM/DD/YYYY)
+                - generic [ref=e201]: "*"
+              - cell "(None)" [ref=e202]:
+                - generic [ref=e203]:
+                  - link "(None)" [ref=e205] [cursor=pointer]:
+                    - /url: javascript:void 1;
+                  - button [ref=e207] [cursor=pointer]
+            - row "Gender * (None)" [ref=e208]:
+              - cell "Gender *" [ref=e209]:
+                - text: Gender
+                - generic [ref=e210]: "*"
+              - cell "(None)" [ref=e211]:
+                - generic [ref=e212]:
+                  - link "(None)" [ref=e214] [cursor=pointer]:
+                    - /url: javascript:void 1;
+                  - button [ref=e216] [cursor=pointer]
+            - row "Ethnicity - Hispanic or Latino (None)" [ref=e217]:
+              - cell "Ethnicity - Hispanic or Latino" [ref=e218]
+              - cell "(None)" [ref=e219]:
+                - generic [ref=e220]:
+                  - link "(None)" [ref=e222] [cursor=pointer]:
+                    - /url: javascript:void 1;
+                  - button [ref=e224] [cursor=pointer]
+            - row "Race (None)" [ref=e225]:
+              - cell "Race" [ref=e226]
+              - cell "(None)" [ref=e227]:
+                - generic [ref=e230]:
+                  - link "(None)" [ref=e232] [cursor=pointer]:
+                    - /url: javascript:void 1;
+                  - button [ref=e234] [cursor=pointer]
+            - row "Program Codes (None)" [ref=e235]:
+              - cell "Program Codes" [ref=e236]
+              - cell "(None)" [ref=e237]:
+                - generic [ref=e240]:
+                  - link "(None)" [ref=e242] [cursor=pointer]:
+                    - /url: javascript:void 1;
+                  - button [ref=e244] [cursor=pointer]
+            - row "Admin Codes (None)" [ref=e245]:
+              - cell "Admin Codes" [ref=e246]
+              - cell "(None)" [ref=e247]:
+                - generic [ref=e250]:
+                  - link "(None)" [ref=e252] [cursor=pointer]:
+                    - /url: javascript:void 1;
+                  - button [ref=e254] [cursor=pointer]
+            - row [ref=e255]:
+              - cell [ref=e256]
+            - row "* Required fields" [ref=e257]:
+              - cell "* Required fields" [ref=e258]:
+                - generic [ref=e259]: "* Required fields"
+            - row [ref=e260]:
+              - cell [ref=e261]
+          - rowgroup [ref=e262]:
+            - row "Back Save" [ref=e263]:
+              - cell "Back Save" [ref=e264]:
+                - button "Back" [ref=e265] [cursor=pointer]
+                - button "Save" [ref=e266] [cursor=pointer]
+  - toolbar "Footer, Expandable. Press enter to expand" [ref=e271]:
+    - link "Riverside Insights homepage" [ref=e272] [cursor=pointer]:
+      - /url: http://www.riversideinsights.com
+    - generic [ref=e273]:
+      - link "Terms of Use" [ref=e274] [cursor=pointer]:
+        - /url: https://www.stage.riversidedatamanager.com/termsOfuse
+      - text: "|"
+      - link "Privacy Policy" [ref=e275] [cursor=pointer]:
+        - /url: https://www.stage.riversidedatamanager.com/termsOfUse#PrivacyPolicy
+      - text: "|"
+      - generic "Site Map Expandable, Select and use tab to navigate" [ref=e276] [cursor=pointer]: Site Map
+```
