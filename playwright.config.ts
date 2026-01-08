@@ -1,4 +1,4 @@
-import { defineConfig } from '@playwright/test';
+import { defineConfig, devices } from '@playwright/test';
 
 export default defineConfig({
   testDir: './tests',
@@ -11,9 +11,11 @@ export default defineConfig({
     navigationTimeout: 30000,
   },
   projects: [
-    { name: 'chromium', use: { browserName: 'chromium' } },
-    // { name: 'firefox', use: { browserName: 'firefox' } },
-    // { name: 'webkit', use: { browserName: 'webkit' } },
+    {
+      name: 'chromium',
+      use: { ...devices['Desktop Chrome'] },
+      fullyParallel: true,
+    },
   ],
   reporter: [
     ['list'],
