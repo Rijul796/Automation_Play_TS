@@ -151,7 +151,7 @@ test('test', async ({ page }) => {
   const now = new Date();
   const dd = String(now.getDate()).padStart(2, '0');
   const mm = String(now.getMonth() + 1).padStart(2, '0');
-  const testEventName = `Raj Testing ${dd}/${mm}`;
+  const testEventName = `Testing ${dd}/${mm}`;
   await page.getByRole('textbox', { name: 'TEST EVENT NAME*' }).fill(testEventName);
   await page.getByText('Select participants').click();
   await page.getByRole('treeitem', { name: 'DMQA-S' }).locator('path').click();

@@ -136,7 +136,7 @@ test('test', async ({ page }) => {
   const now = new Date();
   const dd = String(now.getDate()).padStart(2, '0');
   const mm = String(now.getMonth() + 1).padStart(2, '0');
-  const testEventName = `Raj Testing ${dd}/${mm}`;
+  const testEventName = `Reg Testing ${dd}/${mm}`;
   await page.getByRole('textbox', { name: 'TEST EVENT NAME*' }).fill(testEventName);
   await page.getByText('Select participants').click();
   await page.getByRole('treeitem', { name: 'Riverdale' }).locator('svg').click();
@@ -210,9 +210,6 @@ test('test', async ({ page }) => {
     // fallback JS click
     await cogatOption.evaluateAll((els: Element[]) => els.forEach(e => (e as HTMLElement).click()));
   }
-  // After selecting CogAT 8 Complete, select test batteries (Verbal/Quantitative/Nonverbal)
-  // Use the single verified approach: find the dm-ui dropdown button with the
-  // data-default-text "Select battery" and call uiSelectBatteries on that widget.
   const btn = page.locator('button.dm-ui-dropdown-button[data-default-text="Select battery"]');
   if (await btn.count() === 0) {
     throw new Error('Battery widget not found: expected button.dm-ui-dropdown-button[data-default-text="Select battery"]');
@@ -220,8 +217,7 @@ test('test', async ({ page }) => {
   const btnId = await btn.first().getAttribute('id');
   const widgetSelector = btnId ? `[id="${btnId}"]` : 'button.dm-ui-dropdown-button[data-default-text="Select battery"]';
   // perform selection of the three batteries
-//   await uiSelectBatteries(page, widgetSelector, ['Verbal', 'Quantitative', 'Nonverbal']);
-    await uiSelectBatteries(page, widgetSelector, ['Verbal', 'Quantitative']);
+  await uiSelectBatteries(page, widgetSelector, ['Verbal', 'Quantitative', 'Nonverbal']);
   console.log('battery selection used method C (data-default-text button)');
 
   // Save the test event after selecting the test group and batteries
