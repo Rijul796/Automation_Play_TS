@@ -193,7 +193,6 @@ test('test', async ({ page }) => {
   await page.getByRole('treeitem', { name: 'DMQA-S' }).locator('svg').click();
   await page.waitForTimeout(2000); // 2 seconds delay
   await page.getByRole('treeitem', { name: 'Riverdale' }).locator('svg').click();
-  // await page.waitForTimeout(2000); // 2 seconds delay
   await page.getByText('Riverdale').click();
   await page.waitForTimeout(2000); // 2 seconds delay
   await page.getByRole('listbox').filter({ hasText: 'Select a mode' }).click();
