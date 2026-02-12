@@ -79,30 +79,15 @@ test('test', async ({ page }) => {
   await page.getByRole('textbox', { name: 'Password' }).click();
   await page.getByRole('textbox', { name: 'Password' }).fill('password1');
   await page.getByRole('button', { name: 'Sign In', exact: true }).click();
-  // wait for full page load and for any transient spinners to disappear
-  await page.waitForLoadState('load', { timeout: 30000 }).catch(() => {});
-  await page.locator('.dm-ui-spinner').waitFor({ state: 'detached', timeout: 30000 }).catch(() => {});
-  // ensure the next expected element is visible before interacting
-  await page.waitForSelector('#hlCustomerAcctAcces', { state: 'visible', timeout: 30000 });
-  await page.locator('#hlCustomerAcctAcces').click();
-  await page.getByRole('link', { name: 'Search Contract' }).click();
-  await page.getByRole('row', { name: 'Email Address (None)' }).getByRole('link').click();
-  await page.locator('#emailAddress').fill('sdmqa');
-  // wait briefly for the page to settle after typing the search term
-  await page.waitForLoadState('networkidle', { timeout: 10000 }).catch(() => {});
-  await page.locator('.dm-ui-spinner').waitFor({ state: 'detached', timeout: 10000 }).catch(() => {});
-  // ensure the Search button is visible and enabled before clicking
-  const searchBtn = page.getByRole('button', { name: 'Search Contract' });
-  await searchBtn.waitFor({ state: 'visible', timeout: 10000 });
-  await searchBtn.click();
+  await page.getByRole('link', { name: 'Log in As Staff', exact: true }).click();
+  await page.locator('#emailAddress').click();
+  await page.locator('#emailAddress').fill('devmanual+BlazeA@riversideinsights.com');
+  await page.getByRole('button', { name: 'Search Staff User' }).click();
   await page.getByRole('link', { name: 'Log In', exact: true }).click();
   await page.getByRole('toolbar', { name: 'Assessments Expandable' }).click();
   await page.getByRole('link', { name: 'Test Events', exact: true }).click();
-  // Robustly click the Create button using the known ID and defensively remove any
-  // overlays that might intercept pointer events before clicking.
   const createBtn = page.locator('#btnCreateTestEvent');
   await createBtn.waitFor({ state: 'visible', timeout: 15000 });
-
   // Attempt clicking the Create button and verify the TEST EVENT NAME textbox appears.
   const textbox = page.getByRole('textbox', { name: 'TEST EVENT NAME*' });
   let opened = false;
@@ -154,7 +139,6 @@ test('test', async ({ page }) => {
   const testEventName = `Raj Testing ${dd}/${mm}`;
   await page.getByRole('textbox', { name: 'TEST EVENT NAME*' }).fill(testEventName);
   await page.getByText('Select participants').click();
-  await page.getByRole('treeitem', { name: 'DMQA-S' }).locator('path').click();
   await page.getByRole('treeitem', { name: 'Riverdale' }).locator('svg').click();
   await page.getByText('Riverdale', { exact: true }).click();
   // Open the TEST EVENT ROSTER listbox and select the Riverdale Academy entry reliably
@@ -187,14 +171,6 @@ test('test', async ({ page }) => {
   await page.getByRole('button', { name: 'Assign' }).click();
   await page.waitForTimeout(2000); // 2 seconds delay
   await page.getByRole('button', { name: 'Create/Edit Assignment' }).click();
-  await page.waitForTimeout(2000); // 2 seconds delay
-  await page.getByRole('search').getByText('DMQA-S').click();
-  await page.waitForTimeout(2000); // 2 seconds delay
-  await page.getByRole('treeitem', { name: 'DMQA-S' }).locator('svg').click();
-  await page.waitForTimeout(2000); // 2 seconds delay
-  await page.getByRole('treeitem', { name: 'Riverdale' }).locator('svg').click();
-  // await page.waitForTimeout(2000); // 2 seconds delay
-  await page.getByText('Riverdale').click();
   await page.waitForTimeout(2000); // 2 seconds delay
   await page.getByRole('listbox').filter({ hasText: 'Select a mode' }).click();
   await page.getByRole('checkbox', { name: 'Online Testing' }).click();
@@ -244,7 +220,8 @@ test('test', async ({ page }) => {
   const btnId = await btn.first().getAttribute('id');
   const widgetSelector = btnId ? `[id="${btnId}"]` : 'button.dm-ui-dropdown-button[data-default-text="Select battery"]';
   // perform selection of the three batteries
-  await uiSelectBatteries(page, widgetSelector, ['Verbal', 'Quantitative', 'Nonverbal']);
+//   await uiSelectBatteries(page, widgetSelector, ['Verbal', 'Quantitative', 'Nonverbal']);
+    await uiSelectBatteries(page, widgetSelector, ['Verbal', 'Quantitative']);
   console.log('battery selection used method C (data-default-text button)');
 
   // Save the test event after selecting the test group and batteries
