@@ -96,10 +96,8 @@ test('test', async ({ page }) => {
   await searchBtn.waitFor({ state: 'visible', timeout: 10000 });
   await searchBtn.click();
   await page.getByRole('link', { name: 'Log In', exact: true }).click();
-  await page.getByRole('toolbar', { name: 'Assessments Expandable' }).click();
-  await page.getByRole('link', { name: 'Test Events', exact: true }).click();
-  // Robustly click the Create button using the known ID and defensively remove any
-  // overlays that might intercept pointer events before clicking.
+ await page.getByRole('link', { name: 'Go to Test Events' }).click();
+  await page.getByRole('button', { name: 'Create a New Test Event' }).click();
   const createBtn = page.locator('#btnCreateTestEvent');
   await createBtn.waitFor({ state: 'visible', timeout: 15000 });
 
@@ -151,7 +149,7 @@ test('test', async ({ page }) => {
   const now = new Date();
   const dd = String(now.getDate()).padStart(2, '0');
   const mm = String(now.getMonth() + 1).padStart(2, '0');
-  const testEventName = `Raj Testing ${dd}/${mm}`;
+  const testEventName = `Raj Pilot Testing ${dd}/${mm}`;
   await page.getByRole('textbox', { name: 'TEST EVENT NAME*' }).fill(testEventName);
   await page.getByText('Select participants').click();
   await page.getByRole('treeitem', { name: 'GUP-S' }).locator('path').click();
