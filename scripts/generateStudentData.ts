@@ -90,7 +90,7 @@ interface Student {
 function generateStudent(index: number): Student {
     const grade = Math.floor(Math.random() * 13); // 0 to 12
     const currentYear = new Date().getFullYear();
-    const birthYear = currentYear - (18 - grade); // Assuming most students graduate at ~18
+    const birthYear = (18 - grade); // Assuming most students graduate at ~18
     
     // Generate a date within the birth year
     const dob = faker.date.between({
