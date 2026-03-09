@@ -96,7 +96,7 @@ test('test', async ({ page }) => {
   await searchBtn.waitFor({ state: 'visible', timeout: 10000 });
   await searchBtn.click();
   await page.getByRole('link', { name: 'Log In', exact: true }).click();
- await page.getByRole('link', { name: 'Go to Test Events' }).click();
+  await page.getByRole('link', { name: 'Go to Test Events' }).click();
   await page.getByRole('button', { name: 'Create a New Test Event' }).click();
   const createBtn = page.locator('#btnCreateTestEvent');
   await createBtn.waitFor({ state: 'visible', timeout: 15000 });

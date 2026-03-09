@@ -84,8 +84,8 @@ test('test', async ({ page }) => {
   await page.locator('#emailAddress').fill('devmanual+BlazeA@riversideinsights.com');
   await page.getByRole('button', { name: 'Search Staff User' }).click();
   await page.getByRole('link', { name: 'Log In', exact: true }).click();
-  await page.getByRole('toolbar', { name: 'Assessments Expandable' }).click();
-  await page.getByRole('link', { name: 'Test Events', exact: true }).click();
+ await page.getByRole('link', { name: 'Go to Test Events' }).click();
+  await page.getByRole('button', { name: 'Create a New Test Event' }).click();
   const createBtn = page.locator('#btnCreateTestEvent');
   await createBtn.waitFor({ state: 'visible', timeout: 15000 });
   // Attempt clicking the Create button and verify the TEST EVENT NAME textbox appears.
